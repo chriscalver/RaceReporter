@@ -1,10 +1,8 @@
-import { useState } from "react";
 import reactLogo from "./assets/lexiconICON.jpg";
-import reactLogo2 from "./assets/thatdamhill.png";
 import Center from "./components/Center";
 
 function App() {
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
 
   return (
     <>
@@ -24,7 +22,7 @@ function App() {
                 <a href="#">HOME</a>
               </li>
               <li>
-                <a href="#">FULL REPORT</a>
+                <a href="#">FULL-REPORT</a>
               </li>
 
               <li>
@@ -37,8 +35,6 @@ function App() {
       </header>
 
     <Center />
-
-
 
     </>
   );
