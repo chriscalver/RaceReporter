@@ -1,0 +1,534 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+  font-family: "Michroma";
+  font-size: 16px;
+  font-weight: 700;
+  /* background-color: #e6e6bc; */
+}
+
+header {
+  border: skyblue 0px solid;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: white;
+  /* border-width: 1px; */
+}
+
+.container {
+  width: 1450px;
+  margin: auto;
+  border: skyblue 0px solid;
+}
+
+.nav_checkbox {
+  display: grid;
+  grid-template-columns: 50px 300px 2fr;
+  grid-template-rows: 45px;
+  align-items: center;
+  padding: 0px 0px;
+  border: skyblue 1px solid;
+}
+
+.logo {
+  text-decoration: none;
+  color: #556970;
+  padding-left: 0px;
+  font-size: 25px;
+  border: skyblue 0px solid;
+  margin: 0px 0px 10px 10px;
+}
+
+.logoImg {
+  margin: 0px 0px 10px 10px;
+  border: skyblue 0px solid;
+  text-align: center;
+}
+
+
+.tab-nav {
+  outline: none;
+  display: none;
+}
+
+.label {
+  display: none;
+  color: rgb(144, 20, 20);
+}
+
+.burger {
+  width: 35px;
+  height: 5px;
+  background-color: #aba944;
+  margin-top: 3px;
+}
+
+.content_nav {
+  grid-column: 4;
+  list-style: none;
+  
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
+
+.content_nav li {
+  display: inline-block;
+  padding-right: 12px;
+  text-align: right;
+
+}
+
+.content_nav li a {
+  text-decoration: none;
+  color: #556970;
+  position: relative;
+}
+
+.content_nav li a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background-color: #556970;
+  position: absolute;
+  left: 0;
+  right: 0;
+  transform-origin: right;
+  transform: scale(0, 1);
+  transition: transform ease-in-out 0.5s;
+}
+
+.content_nav li a:hover::after {
+  transform: scale(1, 1);
+}
+
+@media screen and (max-width: 1480px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  body {
+    /* border: skyblue 10px solid; */
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Michroma";
+    font-size: 12px;
+    background-color: #ffffff;
+  }
+  .logo {
+    text-decoration: none;
+    color: #556970;
+    padding-left: 0px;
+    font-size: 18px;
+    border: skyblue 0px solid;
+    margin: 0px 0px 10px 10px;
+  }
+  .container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 645px) {
+  .label {
+    display: grid;
+    cursor: pointer;
+    grid-column: 4;
+    padding-right: 7px;
+    margin-bottom: 18px;
+  }
+
+  .logo {
+    text-decoration: none;
+    color: #556970;
+    padding-left: 0px;
+    font-size: 14px;
+    border: skyblue 0px solid;
+    margin: 0px 0px 10px 1px;
+  }
+
+  .content_nav {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column: 1/4;
+    text-align: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: all ease-in-out 0.6s;
+  }
+
+  .nav_checkbox input:checked ~ .content_nav {
+    max-height: 500px;
+  }
+
+  .content_nav li {
+    padding: 12px 0px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Main Area Layout */
+
+.item {
+  background: white;
+  color: #090224;
+  font-size: 14px;
+  padding: 5px;
+  border: skyblue px solid;
+  text-align: center;
+  font-family: "Michroma";
+  /* border-width: 1px; */
+}
+
+.subheader {
+  font-weight: bolder;
+  font-size: 13px;
+  /* text-align: left; */
+}
+
+.subheader2 {
+  font-weight: bolder;
+  font-size: 16px;
+}
+
+.link {
+  font-weight: bolder;
+  font-size: 12px;
+  color: #330dca;
+}
+
+a:link {
+  color: red;
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  color: red;
+}
+
+/* mouse over link */
+a:hover {
+  color: blue;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
+
+.header {
+  justify-content: center;
+  /* text-align: right; */
+  border: 0px solid #3a921c;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  font-size: 32px;
+  font-weight: 500;
+  font-family: "Racing Sans One", cursive;
+}
+.header2 {
+  justify-content: center;
+  /* text-align: right; */
+  border: 0px solid #3a921c;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  font-size: 28px;
+  font-weight: 500;
+  font-family: "Racing Sans One", cursive;
+}
+
+.item-1 {
+  grid-area: myArea1;
+  vertical-align: middle;
+  text-align: right;
+  /* width: 100px; */
+}
+
+.item-2 {
+  grid-area: myArea2;
+  margin: auto;
+
+  vertical-align: middle;
+  text-align: center;
+  font-size: 34px;
+}
+
+.item-3 {
+  grid-area: myArea3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+.item-4 {
+  grid-area: myArea4;
+  vertical-align: middle;
+}
+
+.item-5 {
+  grid-area: myArea5;
+}
+
+/* .item-6 {    
+    grid-area: myArea6;
+}
+
+.item-7 {    
+    grid-area: myArea7;
+} */
+
+.list {
+  text-align: left;
+  width: 70%;
+  border: 0px solid #3a921c;
+}
+
+.mainlogo {
+    width: 400px;
+    border: skyblue 0px solid;
+  }
+
+
+.f1logomain {
+  width: 80px;
+  padding: 10px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+}
+
+.content_section {
+  width: 100%;
+  margin: auto;
+  /* background: #e6e6bc; */
+}
+
+.container2 {
+  width: 100%;
+  /* margin: 0px; */
+  height: 200vh;
+  /* background: #e6e6bc; */
+  display: grid;
+  grid-template-areas:
+    "myArea1 myArea2 myArea3"
+    "myArea4 myArea4 myArea4"
+    "myArea5 myArea5 myArea5";
+
+  grid-template-rows: 290px 290px 200px;
+  grid-template-columns: 2fr 2fr 2fr;
+}
+
+/* grid-template-columns: 100px 5fr 100px; */
+
+@media screen and (max-width: 950px) {
+  .item {
+    /* background: #FFFFFF; */
+    color: #090224;
+    font-size: 10px;
+    padding: 5px;
+    /* border: skyblue 0px solid; */
+    text-align: center;
+    font-family: "Michroma";
+    /* background: #e6e6bc; */
+  }
+
+  .link {
+    font-weight: bolder;
+    font-size: 10px;
+    color: #330dca;
+  }
+
+  .header {
+    justify-content: center;
+    /* text-align: right; */
+    border: 0px solid #3a921c;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: "Racing Sans One", cursive;
+  }
+
+  .header2 {
+    justify-content: center;
+    /* text-align: right; */
+    border: 0px solid #3a921c;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: "Racing Sans One", cursive;
+  }
+
+  .mainlogo {
+    width: 200px;
+    border: skyblue 0px solid;
+  }
+
+  .f1logomain {
+    width: 165px;
+  }
+  .subheader {
+    font-weight: bolder;
+    font-size: 16px;
+  }
+  .subheader2 {
+    font-weight: bolder;
+    font-size: 12px;
+  }
+
+  .container2 {
+    /* background: #e6e6bc; */
+    width: 90%;
+    /* margin: 0px; */
+    height: 200vh;
+    margin: auto;
+
+    display: grid;
+    grid-template-areas:
+      "myArea1 myArea2 myArea3"
+      "myArea4 myArea4 myArea4"
+      "myArea5 myArea5 myArea5";
+
+    grid-template-rows: 300px 120px 200px;
+    grid-template-columns: 1fr 2.5fr 1fr;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  /* .item-5{
+        display:none;
+    } */
+
+  .container2 {
+    height: 100vh;
+    width: 100%;
+    /* margin: auto; */
+
+    display: grid;
+    grid-template-rows: 170px 40px 65px 65px 65px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "myArea2 myArea2"
+      "myArea4 myArea4"
+      "myArea5 myArea5"
+      "myArea1 myArea1"
+      "myArea3 myArea3";
+  }
+
+  .link {
+    font-weight: bolder;
+    font-size: 9px;
+    color: #330dca;
+  }
+  .subheader {
+    font-weight: bolder;
+    font-size: 11px;
+  }
+
+  .subheader2 {
+    font-weight: bolder;
+    font-size: 9px;
+  }
+  .header {
+    justify-content: center;
+    /* text-align: right; */
+    border: 0px solid #3a921c;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: "Racing Sans One", cursive;
+  }
+  .header2 {
+    justify-content: center;
+    /* text-align: right; */
+    border: 0px solid #3a921c;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: "Racing Sans One", cursive;
+  }
+
+  .mainlogo {
+    width: 250px;
+    border: skyblue 0px solid;
+  }
+
+  .item {
+    /* background: #FFFFFF; */
+    color: #090224;
+    font-size: 10px;
+    padding: 5px;
+    border: skyblue 1px solid;
+    text-align: center;
+    font-family: "Michroma";
+  }
+  .f1logomain {
+    width: 50px;
+  }
+
+  .item-1 {
+    grid-area: myArea1;
+    vertical-align: middle;
+    text-align: center;
+  }
+
+  .item-2 {
+    grid-area: myArea2;
+    vertical-align: middle;
+    text-align: center;
+    border: skyblue 0px solid;
+  }
+
+  .item-3 {
+    grid-area: myArea3;
+    vertical-align: middle;
+    text-align: center;
+  }
+
+  .item-4 {
+    grid-area: myArea4;
+    text-align: center;
+  }
+
+  .item-5 {
+    grid-area: myArea5;
+    text-align: center;
+  }
+}
