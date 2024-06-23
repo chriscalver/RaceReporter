@@ -1,6 +1,6 @@
-import React from "react";
+
 import { useState, useEffect } from "react";
-import reactLogo2 from "./thatdamhill.png";
+import reactLogo2 from "../assets/thatdamhill.png";
 import Display from "./Display";
 
 export default function Center() {
