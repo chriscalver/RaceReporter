@@ -3,7 +3,7 @@ import React from 'react'
 const Display = ({days,hours,minutes,seconds}) => {
     return (
         <div>
-            <h1>Time left till the Race</h1>
+            {/* <h1>Time left till the Race</h1> */}
             <table>
                 <tbody>
                     <tr>

@@ -14,14 +14,30 @@ code {
 
 
 table tbody tr th{
-  background-color:black;
+  background-color:rgb(164, 15, 15);
   color:white;
   padding:10px 0px 10px 0px;
-  font-size: 35px;
+  font-size: 18px;
   margin-right: 100px;
 }
 table tbody tr td{
   font-weight: bold;
-  padding-top: 10px;
+  padding-top: 5px;
   margin-right: 100px;
-}z
+}
+
+@media screen and (max-width: 650px) {
+
+  table tbody tr th{
+    background-color:rgb(164, 15, 15);
+    color:white;
+    padding:2px 0px 2px 0px;
+    font-size: 8px;
+    margin-right: 100px;
+  }
+  table tbody tr td{
+    font-weight: bold;
+    padding-top: 2px;
+    margin-right: 100px;
+  }
+}
