@@ -1,7 +1,8 @@
 body {
   margin: 0;
   padding: 0;
-
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
   font-family: "Michroma";
   font-size: 16px;
@@ -10,13 +11,16 @@ body {
 }
 
 header {
-  border: skyblue 0px solid;
+  border:rgb(164, 15, 15) 1px solid;
   position: sticky;
+  margin: auto;
   top: 0;
   z-index: 1;
-  width: 100%;
+  width: 99%;
   background-color: white;
-  /* border-width: 1px; */
+  /* border-width: 2px; */
+  color: #4c5e64;
+
 }
 
 .container {
@@ -39,20 +43,23 @@ header {
   color: #556970;
   padding-left: 0px;
   font-size: 25px;
-  border: skyblue 0px solid;
-  margin: 0px 0px 10px 10px;
+  font-weight: 700;
+  /* border: skyblue 1px solid; */
+  margin: 8px 0px 10px 10px;
 }
 
 .logoImg {
-  margin: 0px 0px 10px 10px;
+  margin: 9px 0px 10px 10px;
   border: skyblue 0px solid;
   text-align: center;
+  width: 40px;
 }
 
 
 .tab-nav {
   outline: none;
   display: none;
+  margin: 9px 0px 10px 10px;
 }
 
 .label {
@@ -70,7 +77,7 @@ header {
 .content_nav {
   grid-column: 4;
   list-style: none;
-  
+
   margin: 0;
   padding: 0;
   text-align: right;
@@ -125,7 +132,7 @@ header {
   }
   .logo {
     text-decoration: none;
-    color: #556970;
+    /* color: #556970; */
     padding-left: 0px;
     font-size: 18px;
     border: skyblue 0px solid;
@@ -142,16 +149,18 @@ header {
     cursor: pointer;
     grid-column: 4;
     padding-right: 7px;
-    margin-bottom: 18px;
+    margin-bottom: 7px;
   }
 
   .logo {
     text-decoration: none;
-    color: #556970;
+    /* color: #556970; */
     padding-left: 0px;
-    font-size: 14px;
+    font-size: 16px;
+    font-weight: 900;
+
     border: skyblue 0px solid;
-    margin: 0px 0px 10px 1px;
+    margin: 5px 0px 10px 10px;
   }
 
   .content_nav {
@@ -207,11 +216,12 @@ header {
 
 .item {
   background: white;
-  color: #090224;
+  color: #4c5e64;
   font-size: 14px;
   padding: 5px;
-  border: skyblue 1px solid;
+  /* border: skyblue 1px solid; */
   text-align: center;
+  
   font-family: "Michroma";
   /* border-width: 1px; */
 }
@@ -256,22 +266,22 @@ a:active {
 .header {
   justify-content: center;
   /* text-align: right; */
-  border: 0px solid #3a921c;
+  /* border: 1px solid #3a921c; */
   padding: 0px 0px 0px 0px;
   margin: 0px 0px 0px 0px;
-  font-size: 32px;
-  font-weight: 500;
-  font-family: "Racing Sans One", cursive;
+  font-size: 64px;
+  font-weight: 700;
+  /* font-family: "Racing Sans One", cursive; */
 }
 .header2 {
   justify-content: center;
   /* text-align: right; */
-  border: 0px solid #3a921c;
+  /* border: 1px solid #3a921c; */
   padding: 0px 0px 0px 0px;
-  margin: 0px 0px 0px 0px;
-  font-size: 28px;
+  margin: 0px 0px 10px 0px;
+  font-size: 34px;
   font-weight: 500;
-  font-family: "Racing Sans One", cursive;
+  /* font-family: "Racing Sans One", cursive; */
 }
 
 .item-1 {
@@ -297,12 +307,19 @@ a:active {
 }
 
 .item-4 {
-  grid-area: myArea4;
+  grid-area: myArea4;  
+  /* margin: auto; */
+
   vertical-align: middle;
+  text-align: center;
 }
 
 .item-5 {
   grid-area: myArea5;
+  margin: auto;
+
+  vertical-align: middle;
+  text-align: center;
 }
 
 /* .item-6 {    
@@ -320,9 +337,15 @@ a:active {
 }
 
 .mainlogo {
-    width: 450px;
+    width: 550px;
     border: skyblue 0px solid;
   }
+  .mainlogo2 {
+    width: 150px;
+    border: skyblue 0px solid;
+  }
+
+  
 
 
 .f1logomain {
@@ -340,7 +363,7 @@ a:active {
 .container2 {
   width: 100%;
   /* margin: 0px; */
-  height: 200vh;
+  height: 100vh;
   /* background: #e6e6bc; */
   display: grid;
   grid-template-areas:
@@ -348,7 +371,7 @@ a:active {
     "myArea4 myArea4 myArea4"
     "myArea5 myArea5 myArea5";
 
-  grid-template-rows: 200px 290px 200px;
+  grid-template-rows: 200px 290px 150px;
   grid-template-columns: 2fr 2fr 2fr;
 }
 
@@ -376,11 +399,12 @@ a:active {
     justify-content: center;
     /* text-align: right; */
     border: 0px solid #3a921c;
+    color: rgb(144, 20, 20);
     padding: 0px 0px 0px 0px;
     margin: 0px 0px 0px 0px;
-    font-size: 20px;
-    font-weight: 500;
-    font-family: "Racing Sans One", cursive;
+    font-size: 64px;
+    font-weight: 700;
+    /* font-family: "Racing Sans One", cursive; */
   }
 
   .header2 {
@@ -388,14 +412,14 @@ a:active {
     /* text-align: right; */
     border: 0px solid #3a921c;
     padding: 0px 0px 0px 0px;
-    margin: 0px 0px 0px 0px;
+    margin: 0px 0px 10px 0px;
     font-size: 20px;
     font-weight: 500;
-    font-family: "Racing Sans One", cursive;
+    /* font-family: "Racing Sans One", cursive; */
   }
 
   .mainlogo {
-    width: 350px;
+    width: 450px;
     border: skyblue 0px solid;
   }
 
@@ -424,7 +448,7 @@ a:active {
       "myArea4 myArea4 myArea4"
       "myArea5 myArea5 myArea5";
 
-    grid-template-rows: 300px 120px 200px;
+    grid-template-rows: 200px 220px 200px;
     grid-template-columns: 1fr 2.5fr 1fr;
   }
 }
@@ -440,7 +464,7 @@ a:active {
     /* margin: auto; */
 
     display: grid;
-    grid-template-rows: 170px 75px 65px 65px 65px;
+    grid-template-rows: 170px 175px 165px 165px 165px;
     grid-template-columns: 1fr;
     grid-template-areas:
       "myArea2 myArea2"
@@ -467,29 +491,33 @@ a:active {
   .header {
     justify-content: center;
     /* text-align: right; */
-    border: 0px solid #3a921c;
+    /* border: 1px solid #3a921c; */
     padding: 0px 0px 0px 0px;
     margin: 0px 0px 0px 0px;
-    font-size: 18px;
-    font-weight: 500;
-    font-family: "Racing Sans One", cursive;
+    font-size: 36px;
+    font-weight: 700;
+    /* font-family: "Racing Sans One", cursive; */
   }
   .header2 {
     justify-content: center;
     /* text-align: right; */
-    border: 0px solid #3a921c;
+    /* border: 1px solid #3a921c; */
     padding: 0px 0px 0px 0px;
-    margin: 0px 0px 0px 0px;
+    margin: 0px 0px 10px 0px;
     font-size: 18px;
-    font-weight: 500;
-    font-family: "Racing Sans One", cursive;
+    font-weight: 600;
+    /* font-family: "Racing Sans One", cursive; */
   }
 
   .mainlogo {
-    width: 300px;
+    width: 360px;
     border: skyblue 0px solid;
   }
 
+  .mainlogo2 {
+    width: 110px;
+    border: skyblue 0px solid;
+  }
   .item {
     /* background: #FFFFFF; */
     color: #090224;

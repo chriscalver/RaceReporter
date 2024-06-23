@@ -1,7 +1,10 @@
 
 import { useState, useEffect } from "react";
 import reactLogo2 from "../assets/thatdamhill.png";
+import reactLogo3 from "../assets/caution.png";
+
 import Display from "./Display";
+import Progressbar from "./Progressbar";
 
 export default function Center() {
   const endTime = new Date("Sept 21, 2024 08:00:00").getTime();
@@ -32,6 +35,11 @@ export default function Center() {
           </div>
           <div className="item item-3"></div>
           <div className="item item-4">
+          <img src={reactLogo3} className="mainlogo2" />
+            <h1 className="header">24hr RACE</h1>
+            <h1 className="header2">starts in</h1>
+            
+
             <center>
               <Display
                 days={remainingDays}
@@ -39,10 +47,17 @@ export default function Center() {
                 minutes={remainingMinutes}
                 seconds={remainingSeconds}
               />
+              
             </center>
+           
+           
+
             {/* <div>Race Reporter</div> */}
           </div>
-          <div className="item item-5"></div>
+          <div className="item item-5">
+          {/* <Progressbar /> */}
+            
+          </div>
         </div>
       </section>
     </div>
