@@ -1,4 +1,4 @@
-import reactLogo from "../assets/news2.png";
+import reactLogo from "../assets/news.png";
 
 export default function Header() {
   return (
@@ -16,10 +16,10 @@ export default function Header() {
             </label>
             <ul className="content_nav">
               <li>
-                <a href="#">HOME</a>
+                <a href="">HOME</a>
               </li>
               <li>
-                <a href="#">FULL-REPORT</a>
+                <a href="#chart">FULL-REPORT</a>
               </li>
 
               <li>
