@@ -4,7 +4,7 @@ export default function Header() {
   return (
     <div>
       <header>
-        <div className="container">
+        <div className="container" id="homebase">
           <nav className="nav_checkbox">
             <img src={reactLogo} className="logoImg" width="30" />
             <h2 className="logo">Race Reporter</h2>
@@ -16,7 +16,7 @@ export default function Header() {
             </label>
             <ul className="content_nav">
               <li>
-                <a href="">HOME</a>
+                <a href="#">HOME</a>
               </li>
               <li>
                 <a href="#chart">FULL-REPORT</a>

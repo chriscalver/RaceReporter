@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import reactLogo2 from "../assets/thatdamhill.png";
 import reactLogo3 from "../assets/caution.png";
+import reactLogo4 from "../assets/strava.svg";
+import axios from "axios";
 
 import Display from "./Display";
 import Progressbar from "./Progressbar";
@@ -20,6 +22,7 @@ import {
 
 export default function Center() {
   const endTime = new Date("Sept 21, 2024 08:00:00").getTime();
+
   const [currentTime, setcurrentTime] = useState(new Date().getTime());
   const gap = endTime - currentTime; //177670892
 
@@ -59,10 +62,38 @@ export default function Center() {
       amt: 40,
     },
   ];
+  const [recentRunCount, setrecentRunCount] = useState([0]);
+
+  const employeeAPI = (
+    url = "https://www.chriscalver.com/employeeregisterapibk/api/Employee/"
+  ) => {
+    return {
+      fetchAll: () => axios.get(url),
+    };
+  };
+
+  function refreshEmployeeList() {
+    employeeAPI()
+      .fetchAll()
+      .then((res) => {
+        // setEmployeeList(res.data);
+        setrecentRunCount(res.data);
+
+        console.log(res.data);
+        //setRating(rating);
+      })
+      .catch((err) => console.log(err));
+  }
 
   useEffect(() => {
     setTimeout(() => setcurrentTime(new Date().getTime()), 1000);
+    // refreshEmployeeList();
   }, [currentTime]); // 11:30:55
+
+  useEffect(() => {
+    //setTimeout(() => setcurrentTime(new Date().getTime()), 1000);
+    refreshEmployeeList();
+  }, []); // 11:30:55
 
   return (
     <div>
@@ -91,32 +122,67 @@ export default function Center() {
           </div>
           <div className="item item-5" id="chart">
             {/* <Progressbar /> */}
+           
+            <h1 className="header3">4-Week Training Stats</h1>
+            <div><img src={reactLogo4} width="100" />  
+            </div>
             <center>
-            <h3 className="header2">4 Week Training History</h3>
-            <BarChart
-              width={360}
-              height={200}
-              data={data}
-              margin={{
-                top: 5,
-                right: 30,
-                left: 0,
-                bottom: 5,
-              }}
-            >
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="name" />
-              <YAxis dataKey="amt" />
-              <Tooltip />
-              <Legend />
-              {/* <Bar dataKey="pv" fill="#8884d8" activeBar={<Rectangle fill="pink" stroke="blue" />} /> */}
-              <Bar
-                dataKey="kms"
-                fill="#B1312A"
-                activeBar={<Rectangle fill="#C5A432" stroke="purple" />}
-              />
-            </BarChart>
-            </center>
+              
+              <BarChart
+                width={390}
+                height={200}
+                data={data}
+                margin={{
+                  top: 5,
+                  right: 30,
+                  left: 0,
+                  bottom: 5,
+                }}
+              >
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="name" />
+                <YAxis dataKey="amt" />
+                <Tooltip />
+                <Legend />
+                {/* <Bar dataKey="pv" fill="#8884d8" activeBar={<Rectangle fill="pink" stroke="blue" />} /> */}
+                <Bar
+                  dataKey="kms"
+                  fill="#B1312A"
+                  activeBar={<Rectangle fill="#C5A432" stroke="purple" />}
+                />
+              </BarChart>
+
+              <table className="table1">
+                <tr>
+                  <th>Total Runs:</th>
+                  {/* <td>{recentRunCount[0].employeeID}</td> */}
+                  <td>19</td>
+
+                </tr>
+                <tr>
+                  <th>Distance:</th>
+                  {/* <td>{recentRunCount[0].employeeID} kms</td> */}
+                  <td>138 kms</td>
+                </tr>
+              </table>
+              <h1 className="header3">Year to Date Stats</h1>
+            
+            <div><img src={reactLogo4} width="100" />  
+            <table className="table1">
+                <tr>
+                  <th>Total Runs:</th>
+                  {/* <td>{recentRunCount[0].employeeID}</td> */}
+                  <td>85</td>
+
+                </tr>
+                <tr>
+                  <th>Distance:</th>
+                  {/* <td>{recentRunCount[0].employeeID} kms</td> */}
+                  <td>620 kms</td>
+                </tr>
+              </table>
+              
+            </div></center>
           </div>
         </div>
       </section>
