@@ -112,6 +112,7 @@ header {
   transform: scale(1, 1);
 }
 
+
 @media screen and (max-width: 1480px) {
   .container {
     width: 100%;
@@ -215,8 +216,8 @@ header {
 
 .table1{
   background-color:rgb(255, 255, 255);
-width: 220px;
-margin: 0px 0px 0px 0px;
+width: 250px;
+margin: 0px 0px 5px 0px;
 
   color:rgb(61, 56, 56);
   padding:5px 0px 5px 0px;
@@ -226,7 +227,7 @@ margin: 0px 0px 0px 0px;
 .table1 th{
   font-weight: bold;
   padding-top: 0px;
-  width: 60%;
+  width: 50%;
   text-align: left;
     /* margin-right: 100px; */
 }
@@ -234,7 +235,7 @@ margin: 0px 0px 0px 0px;
   font-weight: bold;
   padding-top: 0px;
   /* margin-right: 100px; */
-  width: 40%;
+  width: 50%;
 
 }
 
@@ -325,9 +326,9 @@ a:active {
 .item {
   background: white;
   color: #4c5e64;
-  font-size: 14px;
+  font-size: 12px;
   padding: 5px;
-   border: skyblue 1px solid;
+   /* border: skyblue 1px solid; */
   /* text-align: center; */
   background-color: white;
 
@@ -549,7 +550,7 @@ a:active {
     /* margin: auto; */
 
     display: grid;
-    grid-template-rows: 250px 475px 965px 165px 165px;
+    grid-template-rows: 270px 475px 965px 165px 165px;
     grid-template-columns: 1fr;
     grid-template-areas:
       "myArea2 myArea2"
@@ -607,7 +608,7 @@ a:active {
   .mainlogo {
     width: 360px;
     border: skyblue 0px solid;
-    margin: 40px 0px 10px 0px;
+    margin: 80px 0px 10px 0px;
   }
 
   .mainlogo2 {
@@ -619,7 +620,7 @@ a:active {
   .item {
     /* background: #FFFFFF; */
     color: #090224;
-    font-size: 10px;
+    font-size: 9px;
     padding: 5px;
     /* border: skyblue 1px solid; */
     text-align: center;

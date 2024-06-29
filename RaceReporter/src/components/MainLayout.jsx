@@ -20,6 +20,9 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
+import { CircularProgressbar, buildStyles} from "react-circular-progressbar";
+import "react-circular-progressbar/dist/styles.css";
+
 export default function Center() {
   const endTime = new Date("Sept 21, 2024 08:00:00").getTime();
 
@@ -63,6 +66,8 @@ export default function Center() {
     },
   ];
   const [recentRunCount, setrecentRunCount] = useState([0]);
+
+  const percentage = 42;
 
   const employeeAPI = (
     url = "https://www.chriscalver.com/employeeregisterapibk/api/Employee/"
@@ -122,19 +127,19 @@ export default function Center() {
           </div>
           <div className="item item-5" id="chart">
             {/* <Progressbar /> */}
-           
+
             <h1 className="header3">4-Week Training Stats</h1>
-            <div><img src={reactLogo4} width="100" />  
+            <div>
+              <img src={reactLogo4} width="100" />
             </div>
             <center>
-              
               <BarChart
-                width={390}
+                width={400}
                 height={200}
                 data={data}
                 margin={{
                   top: 5,
-                  right: 30,
+                  right: 80,
                   left: 0,
                   bottom: 5,
                 }}
@@ -157,7 +162,6 @@ export default function Center() {
                   <th>Total Runs:</th>
                   {/* <td>{recentRunCount[0].employeeID}</td> */}
                   <td>19</td>
-
                 </tr>
                 <tr>
                   <th>Distance:</th>
@@ -166,23 +170,81 @@ export default function Center() {
                 </tr>
               </table>
               <h1 className="header3">Year to Date Stats</h1>
-            
-            <div><img src={reactLogo4} width="100" />  
-            <table className="table1">
-                <tr>
-                  <th>Total Runs:</th>
-                  {/* <td>{recentRunCount[0].employeeID}</td> */}
-                  <td>85</td>
 
-                </tr>
-                <tr>
-                  <th>Distance:</th>
-                  {/* <td>{recentRunCount[0].employeeID} kms</td> */}
-                  <td>620 kms</td>
-                </tr>
-              </table>
+              <div>
+                <img src={reactLogo4} width="100" />
+                <table className="table1">
+                  <tr>
+                    <th>Total Runs:</th>
+                    {/* <td>{recentRunCount[0].employeeID}</td> */}
+                    <td>85</td>
+                  </tr>
+                  <tr>
+                    <th>Distance:</th>
+                    {/* <td>{recentRunCount[0].employeeID} kms</td> */}
+                    <td>620 kms</td>
+                  </tr>
+                  <tr>
+                    <th>Goal:</th>
+                    {/* <td>{recentRunCount[0].employeeID} kms</td> */}
+                    <td>1500 kms</td>
+                  </tr>
+                </table>
+              </div>
+
+              <div style={{ width: 200, height: 200 }}>
+              <CircularProgressbar 
+              value={percentage} 
+              text={`${percentage}%`}
               
-            </div></center>
+              styles={{
+                // Customize the root svg element
+                root: {},
+                // Customize the path, i.e. the "completed progress"
+                path: {
+                  // Path color
+                  
+                  stroke: '#B1312A',
+
+                  // stroke: `rgba(62, 152, 199, ${percentage / 100})`,
+                  // Whether to use rounded or flat corners on the ends - can use 'butt' or 'round'
+                  strokeLinecap: 'round',
+                  // Customize transition animation
+                  transition: 'stroke-dashoffset 0.5s ease 0s',
+                  // Rotate the path
+                //  transform: 'rotate(0.25turn)',
+                  transformOrigin: 'center center',
+                },
+                // Customize the circle behind the path, i.e. the "total progress"
+                trail: {
+                  // Trail color
+                  stroke: '#C5A432',
+                  // Whether to use rounded or flat corners on the ends - can use 'butt' or 'round'
+                  strokeLinecap: 'butt',
+                  // Rotate the trail
+                  transform: 'rotate(0.25turn)',
+                  transformOrigin: 'center center',
+                },
+                // Customize the text
+                text: {
+                  // Text color
+                  fill: '#B1312A',
+                  // Text size
+                  fontSize: '16px',
+                },
+                // Customize background - only used when the `background` prop is true
+                background: {
+                  fill: '#3e98c7',
+                },
+              }}
+
+
+              
+              />;
+
+
+              </div>
+            </center>
           </div>
         </div>
       </section>

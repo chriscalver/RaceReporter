@@ -1,4 +1,4 @@
-import reactLogo from "../assets/news.png";
+import reactLogo from "../assets/news2.png";
 
 export default function Header() {
   return (
