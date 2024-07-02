@@ -3,9 +3,9 @@ import reactLogo2 from "../assets/thatdamhill.png";
 import reactLogo3 from "../assets/caution.png";
 import reactLogo4 from "../assets/strava.svg";
 import axios from "axios";
-
+// import { RotatingLines } from "react-loader-spinner";
 import Display from "./Display";
-import Progressbar from "./Progressbar";
+// import Progressbar from "./Progressbar";
 
 import React, { PureComponent } from "react";
 import {
@@ -41,25 +41,25 @@ export default function Center() {
 
   const data = [
     {
-      name: "Week 1",
+      name: "Wk 1",
       kms: 32,
       pv: 2400,
       amt: 10,
     },
     {
-      name: "Week 2",
+      name: "Wk 2",
       kms: 28,
       pv: 1398,
       amt: 20,
     },
     {
-      name: "Week 3",
+      name: "Wk 3",
       kms: 36,
       pv: 9800,
       amt: 30,
     },
     {
-      name: "Week 4",
+      name: "Wk 4",
       kms: 30,
       pv: 3908,
       amt: 40,
@@ -128,10 +128,20 @@ export default function Center() {
           <div className="item item-5" id="chart">
             {/* <Progressbar /> */}
 
-            <h1 className="header3">4-Week Training Stats</h1>
+
+                {/* <RotatingLines width="50" height="50"
+                  wrapperStyle={{
+                    justifyContent: "center",
+                  }}
+                  /> */}
+             <div style={{marginTop: 100}}>
+               <h1 className="header">2024 Training Log</h1></div>
             <div>
-              <img src={reactLogo4} width="100" />
+              <img src={reactLogo4} width="200"  style={{ marginRight: 30 }}/>
             </div>
+            <h1 className="header3">Last Four weeks</h1>
+
+           
             <center>
               <BarChart
                 width={400}
@@ -169,10 +179,11 @@ export default function Center() {
                   <td>138 kms</td>
                 </tr>
               </table>
+              {/* <h1 className="header3">Year to Date Stats</h1> */}
               <h1 className="header3">Year to Date Stats</h1>
 
               <div>
-                <img src={reactLogo4} width="100" />
+                {/* <img src={reactLogo4} width="100" style={{ marginRight: 30 }}/> */}
                 <table className="table1">
                   <tr>
                     <th>Total Runs:</th>
@@ -192,7 +203,7 @@ export default function Center() {
                 </table>
               </div>
 
-              <div style={{ width: 200, height: 200 }}>
+              <div style={{ width: 200, height: 200, marginRight: 30 }}>
               <CircularProgressbar 
               value={percentage} 
               text={`${percentage}%`}
@@ -236,13 +247,8 @@ export default function Center() {
                 background: {
                   fill: '#3e98c7',
                 },
-              }}
-
-
-              
+              }}              
               />;
-
-
               </div>
             </center>
           </div>
